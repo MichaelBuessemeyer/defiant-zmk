@@ -1,10 +1,76 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/outputs.h>
+#include <dt-bindings/zmk/bt.h>
+
+#define DEF 0
+#define NUM 1
+#define SYM 2
+#define NAV 3
 
 / {
+behaviors {
+    lhm: left_homerow_mods {
+        compatible = "zmk,behavior-hold-tap";
+        #binding-cells = <2>;
+        flavor = "tap-unless-interrupted";
+        tapping-term-ms = <100>;                        
+        quick-tap-ms = <200>;
+        bindings = <&kp>, <&kp>;
+        hold-trigger-key-positions = <5 6 7 8 9 16 17 18 19 20 21 28 29 30 31 32 33 39 40 41 42 43>;   
+    };
+ 
+     rhm: right_homerow_mods {
+        compatible = "zmk,behavior-hold-tap";
+        #binding-cells = <2>;
+        flavor = "tap-unless-interrupted";
+        tapping-term-ms = <100>;                      
+        quick-tap-ms = <200>;
+        bindings = <&kp>, <&kp>;
+        hold-trigger-key-positions = <0 1 2 3 4 9 10 11 12 13 14 15 22 23 24 25 26 27 34 35 36 37 38>; 
+    };
 
- combos {
+    hll: hold_long {
+        compatible = "zmk,behavior-hold-tap";
+        label = "Hold-Tap Long";
+        #binding-cells = <2>;
+        flavor = "tap-preferred";
+        bindings =
+            <&kp>,
+            <&kp>;
+
+        tapping-term-ms = <400>;
+        quick-tap-ms = <100>;
+        global-quick-tap;
+    };
+    hl: hold {
+        compatible = "zmk,behavior-hold-tap";
+        label = "Hold-Tap";
+        #binding-cells = <2>;
+        flavor = "tap-preferred";
+        bindings =
+            <&kp>,
+            <&kp>;
+
+        tapping-term-ms = <300>;
+        quick-tap-ms = <100>;
+        global-quick-tap;
+    };
+    hls: hold_short {
+        compatible = "zmk,behavior-hold-tap";
+        label = "Hold-Tap Short";
+        #binding-cells = <2>;
+        flavor = "tap-preferred";
+        bindings =
+            <&kp>,
+            <&kp>;
+
+        tapping-term-ms = <200>;
+        quick-tap-ms = <100>;
+        global-quick-tap;
+    };
+
+    combos {
         compatible = "zmk,combos";
 
         reset_right {
@@ -19,17 +85,52 @@
         };
     };
 
+};
+
 keymap {
     compatible = "zmk,keymap";
 
     default_layer {
         bindings = <
-         &kp Q    &kp W     &kp E     &kp R     &kp T                             &kp Y     &kp U     &kp I     &kp O     &kp P    
-         &kp A    &kp S     &kp D     &kp F     &kp G      &kp LGUI    &kp RCTRL  &kp H     &kp J     &kp K     &kp L     &kp SEMI 
-         &kp Z    &kp X     &kp C     &kp V     &kp B 	   &kp LCTRL   &kp RALT   &kp N     &kp M     &kp COMMA &kp DOT   &kp FSLH 
-                  &kp LGUI  &kp DEL   &kp TAB   &kp SPACE  &kp LSHIFT  &kp RSHIFT &kp RET   &kp BSPC  &kp ESC   &kp RALT
+        &kp Q        &kp W       &kp E       &kp R        &kp T                                 &kp Y       &kp U        &kp I       &kp O           &kp P  
+        &hll LCTRL A &hll LALT S &hll LGUI D &hls LSHFT F &kp G         &kp LCTRL   &kp RCTRL   &kp H       &hls RSHFT J &hll RGUI K &hll LALT L     &hll LCTRL SEMI 
+        &kp Z        &kp X       &kp C       &kp V        &kp B         &kp LGUI    &kp RGUI    &kp N       &kp M        &kp COMMA   &kp DOT         &kp FSLH 
+                     &kp LALT    &kp DEL     &kp TAB      &lt NAV SPACE &sl SYM     &sl SYM     &lt NUM RET &kp BSPC     &kp ESC     &kp RALT
         >;
     };
+
+     
+    number_layer {
+        bindings = <
+        &kp STAR  &kp N7    &kp N8    &kp N9    &kp PLUS                          &kp AMPS &kp GT           &kp LT        &kp PIPE       &kp RBKT
+        &kp N0    &kp N4    &kp N5    &kp N6    &kp DOT   &kp  PRCNT   &kp  RCTRL &kp FSLH  &mt RSHFT EQUAL &mt RGUI PLUS &mt RALT MINUS &mt RCTRL STAR 
+        &kp FSLH  &kp N1    &kp N2    &kp N3    &kp MINUS &kp  EQUAL   &kp  RALT  &kp DLLR  &kp LPAR        &kp RPAR      &kp DOT        &kp COMMA 
+                  &kp LGUI  &kp DEL   &kp TAB   &kp SPACE &sl  SYM     &sl  SYM   &kp RET   &kp BSPC        &to DEF       &kp RGUI
+        >;
+
+    };
+
+    symbol_layer {
+        bindings = <
+        &kp AT    &kp DQT   &kp DLLR &kp RBKT  &kp GRAVE                      &kp PRCNT &kp LBRC  &kp LBKT  &kp RBKT  &kp RBRC
+        &kp COLON &kp UNDER &kp LPAR &kp DQT   &kp FSLH  &kp  CARET  &kp  DOT &kp AMPS  &kp SQT   &kp LPAR  &kp RPAR  &kp HASH 
+        &kp TILDE &kp AT    &kp RPAR &kp QMARK &kp BSLH  &kp  DOT    &kp  DOT &kp PIPE  &kp EXCL  &kp RBRC  &kp COLON &kp BSLH 
+                  &kp LALT  &kp DEL  &kp TAB   &kp SPACE &sl  SYM    &sl  SYM &kp RET   &kp BSPC  &kp ESC   &kp RALT
+        >;
+    };
+
+    // TODO: Add layer for additional symbols supported by macos
+
+
+    navigation_layer {
+        bindings = <
+        &out OUT_TOG &kp K_COPY &kp K_PASTE &trans     &trans                           &kp C_PP &kp C_MUTE &kp C_VOL_DN &kp C_VOL_UP &kp C_NEXT   
+        &kp LCTRL    &kp LALT   &kp LGUI    &kp LSHIFT &kp ESC   &bt BT_NXT  &kp C_BRI_UP &kp ESC &kp LEFT &kp DOWN  &kp UP    &kp RIGHT 
+        &kp COMMA    &trans     &trans      &trans     &trans    &bt BT_PRV  &kp C_BRI_DN &kp INS &kp HOME &kp PG_DN &kp PG_UP &kp END 
+                     &bt BT_CLR &kp DEL     &kp TAB    &kp SPACE &sl SYM     &sl SYM   &lt NUM RET &kp BSPC  &to DEF   &kp RALT
+        >;
+    };
+
 };
 
 };
