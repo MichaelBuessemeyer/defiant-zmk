@@ -114,7 +114,7 @@ keymap {
         bindings = <
         &kp AT    &kp DQT   &kp DLLR &kp RBKT  &kp GRAVE                      &kp PRCNT &kp LBRC  &kp LBKT  &kp RBKT  &kp RBRC
         &kp COLON &kp UNDER &kp LPAR &kp DQT   &kp FSLH  &kp  CARET  &kp  DOT &kp AMPS  &kp SQT   &kp LPAR  &kp RPAR  &kp HASH 
-        &kp TILDE &kp AT    &kp RPAR &kp QMARK &kp BSLH  &kp  DOT    &kp  DOT &kp PIPE  &kp EXCL  &kp RBRC  &kp COLON &kp BSLH 
+        &kp TILDE &kp AT    &kp RPAR &kp QMARK &kp UNDER &kp  DOT    &kp  DOT &kp PIPE  &kp EXCL  &kp RBRC  &kp COLON &kp BSLH 
                   &kp LALT  &kp DEL  &kp TAB   &kp SPACE &sl  SYM    &sl  SYM &kp RET   &kp BSPC  &kp ESC   &kp RALT
         >;
     };
