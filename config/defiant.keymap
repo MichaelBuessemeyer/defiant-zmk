@@ -8,6 +8,173 @@
 #define SYM 2
 #define NAV 3
 
+// German Keybindings
+
+// Special characters
+#define GE_TILDE      RA(RBKT)   // ~ -> AltGr + ]
+#define GE_GRAVE      LS(EQUAL)  // ` -> Shift + = 
+#define GE_EXCLAIM    LS(N1)     // ! -> Shift + 1
+#define GE_DQUOTE     LS(N2)     // " -> Shift + 2
+#define GE_SECTION    LA(N3)     // § -> Alt + 3
+#define GE_DOLLAR     LS(N4)     // $ -> Shift + 4
+#define GE_PERCENT    LS(N5)     // % -> Shift + 5
+#define GE_PRCNT      LS(N5)     // % -> Shift + 5
+#define GE_AMPERSAND  LS(N6)     // & -> Shift + 6
+#define GE_AMPS       LS(N6)     // & -> Shift + 6
+#define GE_SLASH      LS(N7)     // / -> Shift + 7
+#define GE_FSLH       LS(N7)     // / -> Shift + 7
+#define GE_LPAREN     LS(N8)     // ( -> Shift + 8
+#define GE_RPAREN     LS(N9)     // ) -> Shift + 9
+#define GE_EQUAL      LS(N0)     // = -> Shift + 0
+#define GE_QUESTION   LS(MINUS)  // ? -> Shift + -
+#define GE_BACKSLASH  RA(MINUS)  // \ -> AltGr + -
+#define GE_ESZETT     MINUS      // ß -> - (US keyboard)
+#define GE_ACUTE      EQUAL      // ´ (acute accent) -> Shift + ] (US) 
+#define GE_PLUS       RBKT       // + -> ] (US)
+#define GE_ASTERISK   LS(RBKT)   // * -> Shift + ] (US)
+#define GE_STAR       LS(RBKT)   // * -> Shift + ] (US)
+#define GE_APOSTROPHE LS(BSLH)   // ' (apostrophe) -> Shift + \ (US)
+#define GE_APS        LS(BSLH)   // ' (apostrophe) -> Shift + \ (US)
+#define GE_SQT        LS(BSLH)   // ' (apostrophe) -> Shift + \ (US)
+
+// Letters with Umlauts
+#define GE_UE         LBKT       // ü -> [ (US)
+#define GE_OE         SEMI       // ö -> ; (US)
+#define GE_AE         SQT        // ä -> ' (US)
+#define GE_UE_CAP     LS(LBKT)   // Ü -> Shift + [ (US)
+#define GE_OE_CAP     LS(SEMI)   // Ö -> Shift + ; (US)
+#define GE_AE_CAP     LS(SQT)    // Ä -> Shift + ' (US)
+
+// Brackets
+#define GE_LBRACE     RA(N7)     // { -> AltGr + 7 (US)
+#define GE_RBRACE     RA(N0)     // } -> AltGr + 0 (US)
+#define GE_LBRACKET   RA(N8)     // [ -> AltGr + 8 (US)
+#define GE_RBRACKET   RA(N9)     // ] -> AltGr + 9 (US)
+
+// Punctuation
+#define GE_COMMA      COMMA      // , -> , (US)
+#define GE_PERIOD     DOT        // . -> . (US)
+#define GE_MINUS      SLASH      // - -> / (US)
+#define GE_UNDERSCORE LS(SLASH)  // _ -> Shift + / (US)
+#define GE_COLON      LS(DOT)    // : -> Shift + . (US)
+#define GE_SEMICOLON  LS(COMMA)  // ; -> Shift + , (US)
+
+// Symbols needing AltGr
+#define GE_AT         RA(Q)      // @ -> AltGr + Q (US)
+#define GE_HASH       BSLH       // # -> AltGr + 3 (US)
+#define GE_EURO       RA(E)      // € -> AltGr + E (US)
+#define GE_LT       NON_US_BSLH  // < -> NON_US_BSLH (\)
+#define GE_GT   LS(NON_US_BSLH)  // > -> Shift + NON_US_BSLH (\)
+#define GE_PIPE RA(NON_US_BSLH)  // | -> AltGr + NON_US_BSLH (\)
+#define GE_CARET      GRAVE      // ^ -> `
+#define GE_DEGREE     LS(GRAVE)  // ^ -> `
+
+// Lowercase letters
+#define GE_A A
+#define GE_B B
+#define GE_C C
+#define GE_D D
+#define GE_E E
+#define GE_F F
+#define GE_G G
+#define GE_H H
+#define GE_I I
+#define GE_J J
+#define GE_K K
+#define GE_L L
+#define GE_M M
+#define GE_N N
+#define GE_O O
+#define GE_P P
+#define GE_Q Q
+#define GE_R R
+#define GE_S S
+#define GE_T T
+#define GE_U U
+#define GE_V V
+#define GE_W W
+#define GE_X X
+#define GE_Y Z    // German "Y" is in the position of "Z" on US keyboards
+#define GE_Z Y    // German "Z" is in the position of "Y" on US keyboards
+
+// Uppercase letters (Shifted versions)
+#define GE_A_CAP LS(A)
+#define GE_B_CAP LS(B)
+#define GE_C_CAP LS(C)
+#define GE_D_CAP LS(D)
+#define GE_E_CAP LS(E)
+#define GE_F_CAP LS(F)
+#define GE_G_CAP LS(G)
+#define GE_H_CAP LS(H)
+#define GE_I_CAP LS(I)
+#define GE_J_CAP LS(J)
+#define GE_K_CAP LS(K)
+#define GE_L_CAP LS(L)
+#define GE_M_CAP LS(M)
+#define GE_N_CAP LS(N)
+#define GE_O_CAP LS(O)
+#define GE_P_CAP LS(P)
+#define GE_Q_CAP LS(Q)
+#define GE_R_CAP LS(R)
+#define GE_S_CAP LS(S)
+#define GE_T_CAP LS(T)
+#define GE_U_CAP LS(U)
+#define GE_V_CAP LS(V)
+#define GE_W_CAP LS(W)
+#define GE_X_CAP LS(X)
+#define GE_Y_CAP LS(Z)  // Shifted "Y" -> US "Z"
+#define GE_Z_CAP LS(Y)  // Shifted "Z" -> US "Y"
+
+// Numbers
+#define GE_N0 N0
+#define GE_N1 N1
+#define GE_N2 N2
+#define GE_N3 N3
+#define GE_N4 N4
+#define GE_N5 N5
+#define GE_N6 N6
+#define GE_N7 N7
+#define GE_N8 N8
+#define GE_N9 N9
+
+// Modifiers
+#define GE_LCTRL LCTRL
+#define GE_LALT LALT
+#define GE_LGUI LGUI
+#define GE_LSHFT LSHFT
+
+// Function keys
+#define GE_F1  F1
+#define GE_F2  F2
+#define GE_F3  F3
+#define GE_F4  F4
+#define GE_F5  F5
+#define GE_F6  F6
+#define GE_F7  F7
+#define GE_F8  F8
+#define GE_F9  F9
+#define GE_F10 F10
+#define GE_F11 F11
+#define GE_F12 F12
+
+// Arrow keys
+#define GE_LEFT  LEFT
+#define GE_DOWN  DOWN
+#define GE_UP    UP
+#define GE_RIGHT RIGHT
+
+// Other mix
+#define GE_TAB TAB
+#define GE_DEL DEL
+#define GE_SPACE SPACE
+#define GE_RET RET
+#define GE_BSPC BSPC
+#define GE_ESC ESC
+#define GE_ 
+
+
+
+
 / {
 behaviors {
     lhm: left_homerow_mods {
@@ -92,42 +259,37 @@ keymap {
 
     default_layer {
         bindings = <
-        &kp Q        &kp W       &kp E       &kp R        &kp T                                 &kp Y       &kp U        &kp I       &kp O           &kp P  
-        &hll LCTRL A &hll LALT S &hll LGUI D &hls LSHFT F &kp G         &kp LCTRL   &kp RCTRL   &kp H       &hls RSHFT J &hll RGUI K &hll LALT L     &hll LCTRL SEMI 
-        &kp Z        &kp X       &kp C       &kp V        &kp B         &kp LGUI    &kp RGUI    &kp N       &kp M        &kp COMMA   &kp DOT         &kp FSLH 
-                     &kp LALT    &kp DEL     &kp TAB      &lt NAV SPACE &sl SYM     &sl SYM     &lt NUM RET &kp BSPC     &kp ESC     &kp RALT
+            &kp GE_Q           &kp GE_W          &kp GE_E          &kp GE_R           &kp GE_T                                              &kp GE_Y       &kp GE_U           &kp GE_I          &kp GE_O              &kp GE_P  
+            &hll GE_LCTRL GE_A &hll GE_LALT GE_S &hll GE_LGUI GE_D &hls GE_LSHFT GE_F &kp GE_G         &kp GE_LCTRL          &kp GE_RCTRL   &kp GE_H       &hls GE_RSHFT GE_J &hll GE_RGUI GE_K &hll GE_LALT GE_L     &hll GE_LCTRL GE_SEMI 
+            &kp GE_Z           &kp GE_X          &kp GE_C          &kp GE_V           &kp GE_B         &kp GE_LGUI           &kp GE_RGUI    &kp GE_N       &kp GE_M           &kp GE_COMMA      &kp GE_DOT            &kp GE_FSLH 
+                               &kp GE_LALT       &kp GE_DEL        &kp GE_TAB         &lt NAV GE_SPACE &sl SYM               &sl SYM        &lt NUM GE_RET &kp GE_BSPC        &kp GE_ESC        &kp GE_RALT
         >;
     };
 
-     
     number_layer {
         bindings = <
-        &kp STAR  &kp N7    &kp N8    &kp N9    &kp PLUS                          &kp AMPS &kp GT           &kp LT        &kp PIPE       &kp RBKT
-        &kp N0    &kp N4    &kp N5    &kp N6    &kp DOT   &kp  PRCNT   &kp  RCTRL &kp FSLH  &mt RSHFT EQUAL &mt RGUI PLUS &mt RALT MINUS &mt RCTRL STAR 
-        &kp FSLH  &kp N1    &kp N2    &kp N3    &kp MINUS &kp  EQUAL   &kp  RALT  &kp DLLR  &kp LPAR        &kp RPAR      &kp DOT        &kp COMMA 
-                  &kp LGUI  &kp DEL   &kp TAB   &kp SPACE &sl  SYM     &sl  SYM   &kp RET   &kp BSPC        &to DEF       &kp RGUI
+            &kp GE_STAR  &kp GE_N7    &kp GE_N8    &kp GE_N9    &kp GE_PLUS                                       &kp GE_AMPS     &kp GE_GT                  &kp GE_LT             &kp GE_PIPE      &kp GE_UE
+            &kp GE_N0    &kp GE_N4    &kp GE_N5    &kp GE_N6    &kp GE_DOT       &kp GE_PRCNT          &trans     &kp GE_EXCLAIM  &mt  GE_RSHFT  GE_QUESTION &mt  GE_RGUI GE_TILDE &mt GE_RALT GE_L &mt GE_RCTRL GE_AE 
+            &kp GE_FSLH  &kp GE_N1    &kp GE_N2    &kp GE_N3    &kp GE_MINUS     &kp GE_EQUAL          &trans     &trans          &trans                     &trans                &kp GE_ESZETT    &kp GE_OE 
+                         &kp GE_LGUI  &kp GE_DEL   &kp GE_TAB   &kp GE_SPACE     &sl  SYM              &sl  SYM   &kp GE_RET      &kp GE_BSPC                &to DEF               &kp GE_RGUI
         >;
-
     };
 
     symbol_layer {
         bindings = <
-        &kp AT    &kp DQT   &kp DLLR &kp RBKT  &kp GRAVE                      &kp PRCNT &kp LBRC  &kp LBKT  &kp RBKT  &kp RBRC
-        &kp COLON &kp UNDER &kp LPAR &kp DQT   &kp FSLH  &kp  CARET  &kp  DOT &kp AMPS  &kp SQT   &kp LPAR  &kp RPAR  &kp HASH 
-        &kp TILDE &kp AT    &kp RPAR &kp QMARK &kp UNDER &kp  DOT    &kp  DOT &kp PIPE  &kp EXCL  &kp RBRC  &kp COLON &kp BSLH 
-                  &kp LALT  &kp DEL  &kp TAB   &kp SPACE &sl  SYM    &sl  SYM &kp RET   &kp BSPC  &kp ESC   &kp RALT
+            &kp GE_AT  &kp GE_DQUOTE   &kp GE_DOLLAR &kp GE_EURO       &kp GE_GRAVE                                     &kp GE_AMPS     &kp GE_LBRACE     &kp GE_LBRACKET  &kp GE_RBRACKET  &kp GE_RBRACE
+            &trans     &kp GE_APS      &trans        &kp GE_ACUTE      &kp GE_CARET    &trans            &kp  GE_DEGREE &kp GE_EXCLAIM  &kp GE_QUESTION   &kp GE_LPAREN    &kp GE_RPAREN    &kp GE_HASH 
+            &trans     &trans          &trans        &kp GE_UNDERSCORE &trans          &trans            &trans         &trans          &trans            &trans           &kp GE_COLON     &kp GE_BACKSLASH 
+                       &kp GE_LALT     &kp GE_DEL    &kp GE_TAB        &kp GE_SPACE    &sl  SYM          &sl  SYM       &kp GE_RET      &kp GE_BSPC       &kp GE_ESC       &kp GE_RALT
         >;
     };
 
-    // TODO: Add layer for additional symbols supported by macos
-
-
     navigation_layer {
         bindings = <
-        &out OUT_TOG &trans     &kp K_COPY  &K_PASTE   &trans                           &kp C_PP &kp C_MUTE &kp C_VOL_DN &kp C_VOL_UP &kp C_NEXT   
-        &kp LCTRL    &kp LALT   &kp LGUI    &kp LSHIFT &kp ESC   &bt BT_NXT  &kp C_BRI_UP &kp ESC &kp LEFT &kp DOWN  &kp UP    &kp RIGHT 
-        &kp COMMA    &trans     &trans      &trans     &trans    &bt BT_PRV  &kp C_BRI_DN &kp INS &kp HOME &kp PG_DN &kp PG_UP &kp END 
-                     &bt BT_CLR &kp DEL     &kp TAB    &kp SPACE &sl SYM     &sl SYM   &lt NUM RET &kp BSPC  &to DEF   &kp RALT
+            &out GE_F1   &K_CUT       &kp K_COPY   &K_PASTE    &trans                                         &kp C_PP       &kp C_MUTE   &kp C_VOL_DN &kp C_VOL_UP &kp C_NEXT   
+            &kp GE_F2    &kp GE_F3    &kp GE_F4    &kp GE_F5   &kp GE_F6     &bt BT_NXT          &kp C_BRI_UP &trans         &kp GE_LEFT  &kp GE_UP    &kp GE_DOWN  &kp GE_RIGHT 
+            &kp GE_F7    &kp GE_F8    &GE_F9       &kp GE_F10  &kp GE_F11    &bt BT_PRV          &kp C_BRI_DN &kp INS        &kp HOME     &kp PG_DN    &kp PG_UP    &kp END 
+                         &bt BT_CLR   &kp GE_DEL   &kp GE_TAB  &kp GE_SPACE  &sl SYM             &sl SYM      &lt NUM GE_RET &kp GE_BSPC  &to DEF      &kp GE_RALT
         >;
     };
 
