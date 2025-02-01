@@ -170,7 +170,6 @@
 #define GE_RET RET
 #define GE_BSPC BSPC
 #define GE_ESC ESC
-#define GE_ 
 
 
 
