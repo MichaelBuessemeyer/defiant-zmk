@@ -54,6 +54,7 @@
 // Punctuation
 #define GE_COMMA      COMMA      // , -> , (US)
 #define GE_PERIOD     DOT        // . -> . (US)
+#define GE_DOT        DOT        // . -> . (US)
 #define GE_MINUS      SLASH      // - -> / (US)
 #define GE_UNDERSCORE LS(SLASH)  // _ -> Shift + / (US)
 #define GE_COLON      LS(DOT)    // : -> Shift + . (US)
