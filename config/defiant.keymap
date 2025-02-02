@@ -290,7 +290,7 @@ keymap {
 
     navigation_layer {
         bindings = <
-            &out GE_F1   &K_CUT       &kp K_COPY   &K_PASTE    &trans                                         &kp C_PP       &kp C_MUTE   &kp C_VOL_DN &kp C_VOL_UP &kp C_NEXT   
+            &out GE_F1   &K_CUT       &kp K_COPY   &kp K_PASTE &trans                                         &kp C_PP       &kp C_MUTE   &kp C_VOL_DN &kp C_VOL_UP &kp C_NEXT   
             &kp GE_F2    &kp GE_F3    &kp GE_F4    &kp GE_F5   &kp GE_F6     &bt BT_NXT          &kp C_BRI_UP &trans         &kp GE_LEFT  &kp GE_UP    &kp GE_DOWN  &kp GE_RIGHT 
             &kp GE_F7    &kp GE_F8    &GE_F9       &kp GE_F10  &kp GE_F11    &bt BT_PRV          &kp C_BRI_DN &kp INS        &kp HOME     &kp PG_DN    &kp PG_UP    &kp END 
                          &bt BT_CLR   &kp GE_DEL   &kp GE_TAB  &kp GE_SPACE  &sl SYM             &sl SYM      &lt NUM GE_RET &kp GE_BSPC  &to DEF      &kp GE_RALT
