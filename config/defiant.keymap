@@ -139,9 +139,13 @@
 
 // Modifiers
 #define GE_LCTRL LCTRL
+#define GE_RCTRL RCTRL
 #define GE_LALT LALT
+#define GE_RALT RALT
 #define GE_LGUI LGUI
+#define GE_RGUI RGUI
 #define GE_LSHFT LSHFT
+#define GE_RSHFT RSHFT
 
 // Function keys
 #define GE_F1  F1
