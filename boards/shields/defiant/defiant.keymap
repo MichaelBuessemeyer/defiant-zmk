@@ -264,7 +264,7 @@ keymap {
         bindings = <
             &kp GE_Q           &kp GE_W          &kp GE_E          &kp GE_R           &kp GE_T                                              &kp GE_Y       &kp GE_U           &kp GE_I          &kp GE_O              &kp GE_P  
             &hll GE_LCTRL GE_A &hll GE_LALT GE_S &hll GE_LGUI GE_D &hls GE_LSHFT GE_F &kp GE_G         &kp GE_LCTRL          &kp GE_RCTRL   &kp GE_H       &hls GE_RSHFT GE_J &hll GE_RGUI GE_K &hll GE_LALT GE_L     &hll GE_LCTRL GE_SEMICOLON 
-            &kp GE_Z           &kp GE_X          &kp GE_C          &kp GE_V           &kp GE_B         &kp GE_LGUI           &kp GE_RGUI    &kp GE_N       &kp GE_M           &kp GE_COMMA      &kp GE_DOT            &kp GE_FSLH 
+        &kp Z        &kp X       &kp C       &kp V        &kp B         &kp LGUI    &kp RGUI    &kp N       &kp M        &kp COMMA   &kp DOT         &kp FSLH 
                                &kp GE_LALT       &kp GE_DEL        &kp GE_TAB         &lt NAV GE_SPACE &sl SYM               &sl SYM        &lt NUM GE_RET &kp GE_BSPC        &kp GE_ESC        &kp GE_RALT
         >;
     };
